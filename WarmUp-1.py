@@ -27,3 +27,19 @@ def sum_double(a, b):
     return sum([a,b])*2
   else:
     return sum([a,b])
+
+#Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+def diff21(n):
+  if(n>21):
+    return abs(21-n)*2
+  else:
+    return abs(21-n)
+
+#We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return True if we are in trouble.
+def parrot_trouble(talking, hour):
+  return (talking==True) and (hour <7 or hour>20)
+
+#Given 2 ints, a and b, return True if one if them is 10 or if their sum is 10.
+def makes10(a, b):
+    return 10 in (a, b) or sum([a, b]) == 10
+
