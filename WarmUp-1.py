@@ -21,3 +21,9 @@ def monkey_trouble(a_smile, b_smile):
   return (a_smile==True and b_smile==True) or (a_smile==False and b_smile==False)
 
 
+#Given two int values, return their sum. Unless the two values are the same, then return double their sum.
+def sum_double(a, b):
+  if(a==b):
+    return sum([a,b])*2
+  else:
+    return sum([a,b])
