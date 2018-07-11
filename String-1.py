@@ -38,3 +38,34 @@ def first_two(str):
     return str
   else:
     return str[:2]
+
+#Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+def first_half(str):
+  return str[:len(str)/2]
+
+#Given a string, return a version without the first and last char, so "Hello" yields "ell". The string length will be at least 2.
+def without_end(str):
+  if(len(str)==2):
+    return ""
+  else:
+    return str[1:len(str)-1]
+
+#Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).
+def combo_string(a, b):
+  if(len(a)<len(b)):
+    return a+b+a
+  elif len(b)<len(a):
+    return b+a+b
+
+#Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
+def non_start(a, b):
+  return a[1:]+b[1:]
+
+#Given a string, return a "rotated left 2" version where the first 2 chars are moved to the end. The string length will be at least 2.
+def left2(str):
+  l=len(str)
+  if l<=2:
+    return str
+  else:
+    return str[2:]+str[0]+str[1]
+
